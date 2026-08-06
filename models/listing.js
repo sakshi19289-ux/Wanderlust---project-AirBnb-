@@ -8,6 +8,8 @@ const listingSchema = new Schema({
     },
     description:{
         type:String,
+        required:true,
+        maxlength:500
     },
     
     image: {
@@ -21,12 +23,16 @@ const listingSchema = new Schema({
 
     price:{
         type:Number,
+        required:true,
+        min:0
     },
     location:{
+        required:true,
         type:String,
     },
     country:{
         type:String,
+        required:true
     },
 })
 
